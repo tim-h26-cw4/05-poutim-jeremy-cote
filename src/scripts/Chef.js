@@ -1,3 +1,4 @@
+import Poutine from './Poutine.js';
 export default class Chef {
   constructor(comp) {
     this.element = comp;
@@ -13,11 +14,18 @@ export default class Chef {
       //console.log(poutine);
       this.menu.push(poutine);
       //console.log(this.menu);
+      new Poutine(poutine);
     }
     const btn = this.element.querySelector('.js-btn');
     btn.addEventListener('click', this.sendOrder.bind(this));
   }
   sendOrder() {
+    this.container.innerText = '';
     console.log('sendorder');
+    const allPoutines = this.element.querySelectorAll('.is-active');
+    const nbPoutine = allPoutines.length;
+    const p = document.createElement('p');
+    p.innerText = `Nombre total de poutine(s) :  ${nbPoutine}`;
+    this.container.appendChild(p);
   }
 }
