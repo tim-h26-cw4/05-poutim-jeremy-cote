@@ -22,7 +22,9 @@ export default class Chef {
   sendOrder() {
     this.container.innerText = '';
     console.log('sendorder');
-    const allPoutines = this.element.querySelectorAll('.is-active');
+    const allPoutines = this.element.querySelectorAll(
+      `[data-component='is-active']`,
+    );
     const nbPoutine = allPoutines.length;
     const p = document.createElement('p');
     p.innerText = `Nombre total de poutine(s) :  ${nbPoutine}`;

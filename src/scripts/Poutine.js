@@ -29,6 +29,7 @@ export default class Poutine {
     const imgPoutine = this.element.querySelector('.js-pimg');
     //console.log(imgPoutine);
     imgPoutine.classList.add('is-active');
+    imgPoutine.setAttribute(`data-component`, 'is-active');
     imgPoutine.src = `../assets/images/${this.selectedType}.png`;
   }
 }
