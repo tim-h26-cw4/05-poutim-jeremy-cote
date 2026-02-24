@@ -30,6 +30,6 @@ export default class Poutine {
     //console.log(imgPoutine);
     imgPoutine.classList.add('is-active');
     imgPoutine.setAttribute(`data-component`, 'is-active');
-    imgPoutine.src = `../assets/images/${this.selectedType}.png`;
+    imgPoutine.src = `assets/images/${this.selectedType}.png`;
   }
 }
